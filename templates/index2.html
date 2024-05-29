@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Halaman Web</title>
+    </head>
+    <body>
+        {% if is_logged_in%}
+            <h1>Selamat Datang, {{ nama }}</h1>
+        {% else %}
+            <h1>Silakan Login</h1>
+        {% endif %}
+
+        <ul>
+            {% for item in items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
